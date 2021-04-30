@@ -1,12 +1,17 @@
 <h3>parent comopnent {{title}}</h3>
 <div class="container">
   <div class="row">
-    Parent Name is {{parentName}}
+    <p>Parent Name is {{parentName}}</p>
+
+    <h3>Task 2: Use of @output to pass the value from child to parent</h3>
+
+    <p>gift asked by child: {{giftAsked}}</p>
   </div>
   <div class="row">
    <p> Need to pass the parent name to child to make it full name by passing information between components.</p>
   </div>
   <div class="row">
-    <app-child [childParentName] = "parentName"></app-child>
+    <app-child [childParentName] = "parentName" (newGiftEvent)="requestGift($event)"></app-child>
+    
   </div>
 </div>

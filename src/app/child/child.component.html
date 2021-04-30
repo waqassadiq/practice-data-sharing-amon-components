@@ -1,1 +1,7 @@
-<p>child name is {{childName}} "put the parent name here" "{{childParentName}}"</p>
+<h3>Task 1: Use of @input to pass the value from parent to child</h3>
+<p>child name is {{childName}}  "{{childParentName}}"</p>
+
+
+<label for="item-input">request a gift:</label>
+<input type="text" id="item-input" #newItem>
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>

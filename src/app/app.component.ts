@@ -9,8 +9,13 @@ export class AppComponent {
   title = 'practice-data-sharing-amon-components';
 
   parentName: String;
+  giftAsked: String;
 
   constructor(){
     this.parentName = "Smith";
+  }
+
+  requestGift(giftName: String){
+    this.giftAsked = giftName;
   }
 }
